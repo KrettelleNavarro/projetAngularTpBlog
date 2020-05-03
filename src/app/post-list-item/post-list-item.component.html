@@ -1,0 +1,20 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': postLoveIts > 0,
+                'list-group-item-danger': postLoveIts < 0 }"
+    [ngStyle]="{ 'margin': '2.5em 0' }">
+
+  <h2>{{ postTitle }}</h2>
+  <h4>{{ postCreatedAt | date: 'EEEE d MMMM y' }}</h4>
+  <p>{{ postContent }}</p>
+
+
+
+  <div class="btn-toolbar">
+    <button class="btn btn-success"
+            (click)="onLoveIts()">J'aime !</button>
+
+    <button class="btn btn-danger"
+            (click)="onNotLoveIts()">je n'aime pas...</button>
+  </div>
+
+</li>
